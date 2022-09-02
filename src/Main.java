@@ -1,10 +1,15 @@
+import com.sun.org.apache.bcel.internal.generic.ALOAD;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
         int arraySize = 10;
         int  array[] = {10, 20, 23, 34, 44, 44, 53, 56, 21, 99};
+        int  sortedArray[] = {10, 20, 23, 34, 44, 44, 53, 56, 67, 99, 103};
         int  arrayOdd[] = {10, 20, 23, 34, 44, 53, 56, 21, 99};
         int emptyArray[] = {};
+
+
 
         System.out.println(arraySearch(array,99));
         System.out.println(arraySearch(array,909));
@@ -32,6 +37,14 @@ public class Main {
         System.out.println("Normal Array after reverse: " + arrayToString(array));
         System.out.println("Odd Array after reverse: " + arrayToString(arrayOdd));
         System.out.println("Empty Array after reverse: " + arrayToString(emptyArray));
+
+        System.out.println("Check for duplicate binary search" + Algorithms.binarySearch(sortedArray, 44));
+        System.out.println("Check for non existence binary search" + Algorithms.binarySearch(sortedArray, 21));
+        System.out.println("Check for left bound binary search" + Algorithms.binarySearch(sortedArray, 10));
+        System.out.println("Check for right bound binary search" + Algorithms.binarySearch(sortedArray, 99));
+        System.out.println("Check for  positive right bound binary search" + Algorithms.binarySearch(sortedArray, 500));
+        System.out.println("Check for negative left bound binary search" + Algorithms.binarySearch(sortedArray, -99));
+
 
     }
     static void swap() {

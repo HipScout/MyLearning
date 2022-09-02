@@ -8,7 +8,9 @@ public class Main {
         int  sortedArray[] = {10, 20, 23, 34, 44, 44, 53, 56, 67, 99, 103};
         int  arrayOdd[] = {10, 20, 23, 34, 44, 53, 56, 21, 99};
         int emptyArray[] = {};
+        int nums[] = {2, 4, 11, 15, 21};
 
+        int target = 19;
 
 
         System.out.println(arraySearch(array,99));
@@ -45,6 +47,13 @@ public class Main {
         System.out.println("Check for  positive right bound binary search" + Algorithms.binarySearch(sortedArray, 500));
         System.out.println("Check for negative left bound binary search" + Algorithms.binarySearch(sortedArray, -99));
 
+        System.out.println("Two sum " + TwoSum.bruteForceTwoSum(nums, 19));
+        System.out.println("Two sum " + TwoSum.bruteForceTwoSum(nums, 501));
+        System.out.println("Two sum " + TwoSum.bruteForceTwoSum(nums, 8));
+
+        System.out.println("Two sum with binary search " + TwoSum.twoSumWithBinarySearch(nums, 8));
+        System.out.println("Two sum with binary search " + TwoSum.twoSumWithBinarySearch(nums, 15));
+        System.out.println("Two sum with binary search " + TwoSum.twoSumWithBinarySearch(nums, 500));
 
     }
     static void swap() {

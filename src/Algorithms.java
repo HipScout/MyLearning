@@ -14,7 +14,7 @@ public class Algorithms {
 
             }
             else {
-                hi = mid - 1;
+                hi = mid;
             }
         }
         return -1;
